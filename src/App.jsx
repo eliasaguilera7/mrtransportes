@@ -594,7 +594,7 @@ const App = () => {
               {/* Just text and flags now, logo moved up */}
               <div>
                 <p className="opacity-60 leading-relaxed mb-6 text-sm text-justify">
-                  Conectando fronteras con agilidad, legalidad y seguridad. Líderes en transporte de malta y productos químicos en el Mercosur.
+                  Conectando fronteras con agilidad, legalidad y seguridad. Líderes en transporte.
                 </p>
                 <div className="flex flex-wrap gap-4 text-2xl">
                   {countries.map((c, i) => (
