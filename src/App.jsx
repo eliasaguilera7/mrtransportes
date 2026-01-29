@@ -150,6 +150,32 @@ const App = () => {
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
+
+        {/* Mobile Menu (dropdown) */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-[#1D1D5B]/95 backdrop-blur-sm border-t border-white/10">
+            <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
+              {['Inicio', 'Servicios', 'Rutas', 'Nosotros', 'Contacto'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-white font-black uppercase tracking-widest text-xs hover:text-orange-300 transition-colors"
+                >
+                  {item}
+                </a>
+              ))}
+
+              <a
+                href="#cotizar"
+                onClick={() => setIsMenuOpen(false)}
+                className="mt-2 inline-flex items-center justify-center bg-[#F47321] text-white px-6 py-3 rounded-xl font-black text-xs hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/30"
+              >
+                COTIZAR
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
